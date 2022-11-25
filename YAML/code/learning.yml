@@ -1,0 +1,108 @@
+# All YAML files must start and end with "---". This indicates the starting and ending of the YAML files.
+
+# Key-Value Pairs in YAML
+
+# YAML stands for YAML AIN'T MARKUP LANGUAGE.
+
+# example:
+
+app: user-authentication
+port: 9000
+version: 1.7
+
+# creating objects in YAML
+
+microservices:
+  app: user-authentication
+  port: 9002
+  version: 1.8
+
+# Here microservices is an object and app, port, version are object attributes.
+
+# Lists in YAML
+
+microservices:
+  - app: user-authentication
+    port: 9000
+    version: 1.9
+
+# boolean in YAML
+# The boolean keywords in YAML are true, false, yes, no, on, off
+
+microservices:
+  - app: user-authentication
+    port: 9000
+    version: 1.9
+    deployed: true
+  - app: user-authentication
+    port: 9002
+    version: 2.0
+    deployed: false
+  - app: user-authentication
+    port: 9004
+    version: 2.1
+    deployed: yes
+  - app: user-authentication
+    port: 9006
+    version: 2.2
+    deployed: no
+  - app: user-authentication
+    port: 9008
+    version: 2.3
+    deployed: on
+  - app: user-authentication
+    port: 9008
+    version: 2.4
+    deployed: off
+
+# list of objects in YAML
+
+microservices:
+  - app: user-authentication
+      port: 9000
+      version: 1.9
+  - app: shopping-cart
+      port: 9002
+      version: 2.1
+
+# list of simple objects in YAML
+
+microservices:
+  - user-authentication
+  - shopping-cart
+
+# list inside a list in YAML
+
+microservices:
+  - app: user-authentication
+    port: 9002
+    version: 1.9
+  - app: shopping-cart
+    port: 9004
+    version: 
+      - 2.0
+      - 2.1
+      - 2.2
+
+# or can also be written as
+
+microservices:
+  - app: user-authentication
+    port: 9002
+    version: 1.9
+  - app: shopping-cart
+    port: 9004
+    version: [2.0, 2.1, 2.2]  # This is a best practice since it is more human readable
+
+# multiline strings in YAML
+
+multilineString: |
+  01
+  Bengaluru
+  India
+
+# SingleLine  in multipleLine
+
+multilineString: >
+  this will be
+  printed in single line
